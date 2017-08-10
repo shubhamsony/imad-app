@@ -22,7 +22,7 @@ submit.onclick = function(){
        if(request.readystate===XMLHttpRequest.DONE){
             if(request.status===200){
                 var names1 = request.responseText;
-                names1 = JSON.parse(namestring);
+                names1 = JSON.parse(names1);
                 var list ='';
                 for(var i=0; i<names1.length;i++){
                     list+='<li>'+names1[i]+'</li>';
