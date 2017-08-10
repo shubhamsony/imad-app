@@ -7,7 +7,7 @@ button.onclick = function(){
           if(request.status===200){
               var counter= request.responseText;
               var countt = document.getElementById('count');
-              countt.innerHTML="counter";
+              countt.innerHTML=counter;
           }
       }
     };
