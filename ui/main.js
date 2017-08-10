@@ -1,7 +1,15 @@
 var button= document.getElementById('mybtn');
 var countt = document.getElementById('count');
-var counter=0;
 button.onclick = function(){
-    counter++;
-    countt.innerHTML=counter;
+    
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function(){
+      if(request.readyastate=== XMLHttpRequest.DONE){
+          if(request.status===200){
+              var counter= request.responseText;
+              countt.innerHTML="counter";
+          }
+      }
+    };
+    
 };
