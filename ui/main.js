@@ -34,6 +34,6 @@ submit.onclick = function(){
     };
     var nameinput=document.getElementById('name');
     var namelist = nameinput.value;
-    rqst.open('GET','http://shubhamsoni136.imad.hasura-app.io/submit-name?'+namelist , true );
+    rqst.open('GET','http://shubhamsoni136.imad.hasura-app.io/submit-name?name='+namelist , true );
     rqst.send('null');
 };
