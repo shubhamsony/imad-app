@@ -13,27 +13,27 @@ button.onclick = function(){
     };
     
     request.open('GET', 'http://shubhamsoni136.imad.hasura-app.io/counter',true);
-    request.send('null');
+    request.send(null);
 };
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
-    var rqst = new XMLHttpRequest();
-    rqst.onreadystatechange = function(){
-       if(rqst.readystate===XMLHttpRequest.DONE){
-            if(rqst.status===200){
-                var namestring = rqst.responseText;
-                var names1=JSON.parse(namestring);
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function(){
+       if(request.readystate===XMLHttpRequest.DONE){
+            if(request.status===200){
+                var names1 = request.responseText;
+                names1 = JSON.parse(namestring);
                 var newname ="";
                 for(var i=0; i<names1.length;i++){
                     newname+='<li>'+names1[i]+'</li>';
                 }
-                var newlist = document.getElementById('newlist');
-                newlist.innerHTML=newname;
+                var ul = document.getElementById('newlist');
+                ul.innerHTML=newname;
             }        
         }
     };
     var nameinput=document.getElementById('name');
-    var namelist = nameinput.value;
-    rqst.open('GET','http://shubhamsoni136.imad.hasura-app.io/submit-name?name='+namelist , true );
-    rqst.send('null');
+    var name = nameinput.value;
+    request.open('GET','http://shubhamsoni136.imad.hasura-app.io/submit-name?name='+name , true );
+    request.send(null);
 };
