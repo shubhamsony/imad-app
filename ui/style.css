@@ -20,4 +20,8 @@ body {
 .img-medium {
     height: 200px;
 }
+.list{
+    width:60%;
+    text-align:center;
+}
 
