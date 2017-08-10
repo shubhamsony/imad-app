@@ -1,5 +1,4 @@
 var button= document.getElementById('mybtn');
-var countt = document.getElementById('count');
 button.onclick = function(){
     
     var request = new XMLHttpRequest();
@@ -7,6 +6,7 @@ button.onclick = function(){
       if(request.readyastate=== XMLHttpRequest.DONE){
           if(request.status===200){
               var counter= request.responseText;
+              var countt = document.getElementById('count');
               countt.innerHTML="counter";
           }
       }
