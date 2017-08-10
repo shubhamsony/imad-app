@@ -23,7 +23,7 @@ submit.onclick = function(){
             if(request.status===200){
                 var names1 = request.responseText;
                 names1 = JSON.parse(names1);
-                var list ='';
+                var list =``;
                 for(var i=0; i<names1.length;i++){
                     list+='<li>'+names1[i]+'</li>';
                 }
