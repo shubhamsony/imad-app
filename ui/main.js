@@ -27,9 +27,10 @@ submit.onclick = function(){
                 for(var i=0; i<names1.length;i++){
                     list+='<li>'+names1[i]+'</li>';
                 }
-                var ul = document.getElementById('newlist');
+                
+            }
+            var ul = document.getElementById('newlist');
                 ul.innerHTML='list';
-            }        
         }
     };
     var nameinput=document.getElementById('name');
