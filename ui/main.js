@@ -36,4 +36,5 @@ submit.onclick = function(){
     var name = nameinput.value;
     request.open('GET','http://shubhamsoni136.imad.hasura-app.io/submit-name?name='+name , true );
     request.send(null);
-};
+}; var ul = document.getElementById('newlist');
+                ul.innerHTML='newname';
