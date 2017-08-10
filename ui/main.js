@@ -23,12 +23,12 @@ submit.onclick = function(){
             if(request.status===200){
                 var names1 = request.responseText;
                 names1 = JSON.parse(namestring);
-                var newname ="";
+                var list ='';
                 for(var i=0; i<names1.length;i++){
-                    newname+='<li>'+names1[i]+'</li>';
+                    list+='<li>'+names1[i]+'</li>';
                 }
                 var ul = document.getElementById('newlist');
-                ul.innerHTML=newname;
+                ul.innerHTML=list;
             }        
         }
     };
