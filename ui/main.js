@@ -29,9 +29,10 @@ submit.onclick = function(){
                 }
                 
             }
-            var ul = document.getElementById('newlist');
-                ul.innerHTML='list';
+            
         }
+        var ul = document.getElementById('newlist');
+                ul.innerHTML='list';
     };
     var nameinput=document.getElementById('name');
     var name = nameinput.value;
