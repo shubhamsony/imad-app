@@ -1,4 +1,4 @@
-var express = require('express');
+var express = require('express');h   
 var morgan = require('morgan');
 var path = require('path');
 
@@ -42,7 +42,8 @@ app.get('/submit-name', function(req,res){
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
 
-var port = 80;
+var port = 8080;
 app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
+                                                
