@@ -14,6 +14,40 @@ var pool = new Pool(config);
 var app = express();
 app.use(morgan('combined'));
 
+function createTemplate(data){
+    var title = data.title;
+    var date = data.date;
+    var heading = data.heading;
+    var content = data.content;
+    var htmlTemplate = `
+    <html>
+        <head>
+            <title>
+            ${title}
+            </title>
+            <link rel="stylesheet" href="/ui/style.css">
+        </head>
+        <body>
+            <div class="container">
+                <div>
+                    <a href="/">home</a>
+                </div>
+                </hr>
+                <h3>
+                ${heading}
+                </h3>
+                <div>
+                ${date}
+                </div>
+                <div>
+                ${content}
+                </div>
+            </div>
+        </body>
+    </html>
+    `;
+    return htmlTemplate;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -48,8 +82,19 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-app.get('/article', function (req, res) {
-  res.end('this is the page you required');
+app.get('/article/:articleName', function (req, res) {
+  pool.query('SELECT * FROM article WHERE' + req.params.articleName,function(err,result){
+   if(err){
+       res.status(500).send(err.toString());
+   } else{
+       if(result.rows.length===0){
+          res.status(404).send('Article not found'); 
+       } else{
+           var articleData = result.rows[0];
+           res.send(createTemplate(articleData));
+       }
+   }   
+  });
 });
 var names=[];
 app.get('/submit-name', function(req,res){
