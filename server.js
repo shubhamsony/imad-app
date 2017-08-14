@@ -25,7 +25,11 @@ app.get('/counter', function (req , res){
 
 app.get('/testdb' , function (req , res){
     pool.query('SELECT * FROM test' , function(err , result){
-        res.send(JSON.stringify(result));
+        if(err){
+            res.status(500).send(err.toString());
+        } else {
+            res.send(JSON.stringify(result));
+        }
     });
 });
 app.get('/ui/style.css', function (req, res) {
