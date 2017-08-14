@@ -23,7 +23,7 @@ app.get('/counter', function (req , res){
 });
 var pool = new Pool(config);
 app.get('/test-db', function(req,res){
-    poo.query('SELECT * FROM test',function(err,results){
+    pool.query('SELECT * FROM test',function(err,results){
         if(err){
             res.status(500).send(err.toString()); 
         } else {
