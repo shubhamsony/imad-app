@@ -91,12 +91,12 @@ app.get('/hash/:input',function (req, res ){
     var hashedString = hash(req.params.input,'this is an string');
     res.send(hashedString);
 });
-app.get('/create-user', function(req,res){
+app.post('/create-user', function(req,res){
     var username = req.body.username;
     var password = req.body.password;
     var salt = crypto.randomBytes(128).toString('hex');
     var dbstring = hash(password,salt);
-    pool.query("INSERT INTO test (username,password) VALUES ($1,$2)", [username,dbstring],function(err,result){
+    pool.query('INSERT INTO test (username,password) VALUES ($1,$2)', [username,dbstring],function(err,result){
        if(err){
             res.status(500).send(err.toString());
         } else {
