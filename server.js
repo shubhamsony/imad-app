@@ -104,7 +104,7 @@ app.post('/create-user', function(req,res){
         } 
     });
 });
-app.post('/login', function(req,res){
+app.post('/login1', function(req,res){
     var username = req.body.username;
     var password = req.body.password;
     
