@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color:white;
+    background-color:grey;
     margin-top: 75px;
 }
 
@@ -22,4 +22,5 @@ body {
 }
 .container{
     margin-left:200px;
+    background-color:white;
 }
