@@ -57,7 +57,7 @@ app.post('/login', function(req,res){
             }
             else{
                 var dwbstring = result.rows[0].password;
-                res.send(dwbstring.toString('hex'));
+                res.end(dwbstring.toString('hex'));
                 re.send('chaman');
                 
             }
