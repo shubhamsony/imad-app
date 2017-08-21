@@ -56,11 +56,8 @@ app.post('/login', function(req,res){
                 res.status(403).send('username/password invalid');
             }
             else{
-                if(result.row[0].username===username){
-                    res.send('kk');
-                }else{
-                    res.send('pk');
-                }
+                var dbstring = result.rows[0].password;
+                res.send(dbstring);
             }
         }
     });
