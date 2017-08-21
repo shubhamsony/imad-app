@@ -90,7 +90,7 @@ function hash(input, salt ){
 app.post('/login', function(req,res){
     var username=req.body.username;
     var password = req.body.password;
-    pool.qurey('SELECT FROM test WHERE username=$1',[username],function(err,result){
+    pool.query('SELECT FROM test WHERE username=$1',[username],function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }else{
