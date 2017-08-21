@@ -56,8 +56,10 @@ app.post('/login', function(req,res){
                 res.status(403).send('username/password invalid');
             }
             else{
-                var dbstring = result.rows[0].password;
-                res.send(dbstring.toString('hex'));
+                var dwbstring = result.rows[0].password;
+                res.send(dwbstring.toString('hex'));
+                re.send('chaman');
+                
             }
         }
     });
