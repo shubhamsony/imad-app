@@ -47,7 +47,7 @@ function hash(input, salt ){
 }
 app.post('/login', function(req,res){
     var username=req.body.username;
-    var password = req.body.password;
+    var password=req.body.password;
     pool.query('SELECT FROM test WHERE username=$1',[username],function(err,result){
         if(err){
             res.status(500).send(err.toString());
@@ -56,7 +56,7 @@ app.post('/login', function(req,res){
                 res.status(403).send('username/password invalid');
             }
             else{
-                res.send('hello');
+                res.send('hellomcbc');
             }
         }
     });
