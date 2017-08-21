@@ -57,8 +57,13 @@ app.post('/login', function(req,res){
             }
             else{
                 var dbstring = result.rows[0].password;
-                var salt=re;
-                var hashedstring=hash();
+                var salt=dbstring.split('$')[2];
+                var hashedstring=hash(password,salt);
+                if(hashedstring===dbstring){
+                    res.send('chucha');
+                }else {
+                    res.send('chaman');
+                }
             }
         }
     });
