@@ -43,7 +43,7 @@ app.get('/ui/main.js', function (req, res) {
 });
 function hash(input, salt ){
     var hashed = crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
-    return ["pbkdf2",10000,salt,hashed.toString('hex')].join('$');   
+    return salt;   
 }
 app.post('/login', function(req,res){
     var username=req.body.username;
@@ -57,8 +57,8 @@ app.post('/login', function(req,res){
             }
             else{
                 var dbstring = result.rows[0].password;
-                var salt=re
-                var hashedstring=hash()
+                var salt=re;
+                var hashedstring=hash();
             }
         }
     });
