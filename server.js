@@ -94,7 +94,12 @@ app.post('/login', function(req,res){
         if(err){
             res.status(500).send(err.toString());
         }else{
-            res.send('hello');
+            if(result.rows.length===0){
+                res.status(403).send('username/password invalid');
+            }
+            else{
+                res.send('hello');
+            }
         }
     });
 });
