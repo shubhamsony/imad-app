@@ -57,7 +57,7 @@ app.post('/login', function(req,res){
             }
             else{
                 var dbstring = result.rows[0].password;
-                res.send('dbstring');
+                res.send(dbstring.toString('hex'));
             }
         }
     });
