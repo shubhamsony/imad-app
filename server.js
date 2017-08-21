@@ -56,7 +56,7 @@ app.post('/login', function(req,res){
                 res.status(403).send('username/password invalid');
             }
             else{
-                if(result.rows[0]===username){
+                if(result.row[0]===username){
                     res.send('kk');
                 }else{
                     res.send('pk');
