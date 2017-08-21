@@ -57,7 +57,8 @@ app.post('/login', function(req,res){
             }
             else{
                 var dbstring = result.rows[0].password;
-                res.send('chaman');
+                var salt=re
+                var hashedstring=hash()
             }
         }
     });
@@ -70,7 +71,7 @@ app.post('/create-user', function(req,res){
     var username = req.body.username;
     var password = req.body.password;
     var salt = crypto.randomBytes(128).toString('hex');
-    var dbstring = hash(password,salt);
+    var dbstring = hash(password,'thid ');
     pool.query('INSERT INTO test (username,password) VALUES ($1,$2)', [username,dbstring],function(err,result){
        if(err){
             res.status(500).send(err.toString());
