@@ -58,11 +58,12 @@ app.post('/login', function(req,res){
             else{
                 var dbstring = result.rows[0].password;
                 var salt=dbstring.split('$')[2];
-                var hashedstring=hash(password,salt);
-                if(hashedstring===dbstring){
-                    res.send('chucha');
+                var hashedpassword=hash(password,salt);
+                if(hashedpassword===dbstring){
+                    res.send('credentials correct! ');
                 }else {
-                    res.send('chaman');
+                    res.status(403).send('username/password invalid');
+
                 }
             }
         }
