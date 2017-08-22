@@ -13,11 +13,15 @@ var config = {
     port:"5432",
     password:process.env.DB_PASSWORD
 }; 
+
 var pool = new Pool(config);
 var app = express();
+app.use(session({
+    secret: 'somerandomstringvalue',
+    cookie: {maxAge : 1000 * 60 * 60 * 24 * 30}
+}));
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
