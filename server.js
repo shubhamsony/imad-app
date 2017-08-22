@@ -90,7 +90,7 @@ app.get('/check-login' , function(req , res){
         res.send('you are logged in as'+req.session.auth.userId);
     }else{
         res.send('you are not logged in');
-        res.redirect('/');
+        //res.redirect('/');
     }
 });
 
