@@ -5,7 +5,7 @@ submit.onclick = function(){
     request.onreadystatechange = function(){
        if(request.readyState === XMLHttpRequest.DONE){
             if(request.status===200){
-                alert('logged in successfully');
+                alert('registered successfully');
             }else if(request.status===500){
                 alert(request.responseText.toString());
             }
