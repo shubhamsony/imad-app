@@ -27,7 +27,7 @@ app.get('/counter', function (req , res){
 });
 
 app.get('/ui/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+    res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
 app.get('/profile' , function(req,res){
@@ -39,7 +39,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/sign-up.html', function(req,res){
-    res.sendFile(path.join(_dirname, 'sign-up.html'));
+    res.sendFile(path.join(__dirname , 'ui' , 'sign-up.html'));
 });
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
