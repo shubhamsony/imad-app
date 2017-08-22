@@ -7,7 +7,7 @@ submit.onclick = function(){
             if(request.status===200){
                 alert('logged in successfully');
             }else if(request.status===500){
-                alert('something went wrong on the server');
+                alert(responseText.toString());
             }
         }
     };
