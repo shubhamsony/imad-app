@@ -23,10 +23,10 @@ submit.onclick = function(){
 function LoadLoginForm(){
     var loginHtml=`
       <h3>if not registered <a href="/sign-up">Sign Up</a></h3>
-      <h1>Login to continue</h1>
+      <h2>Login to continue</h2>
       <input type="text" id="username" placeholder="username"/>
       <input type="password" id="password"/>
       <input type="submit" value="Submit" id="submit_btn"/>
       `;
-      document.getElementById('login_arear').innerHTML=LoginHtml;
+      document.getElementById('login_area').innerHTML=LoginHtml;
 }
