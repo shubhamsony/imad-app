@@ -100,5 +100,5 @@ loadArticles();
       <input type="text" id="username" placeholder="username"/>
       <input type="password" id="password"/>
       <input type="submit" value="Login" id="submit_btn"/>
-      `;;
+      `;
       
