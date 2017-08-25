@@ -1,5 +1,3 @@
-
-
 function LoadLoginForm(){
     var loginHtml=`
       <h3>if not registered <a href="/sign-up">Sign Up</a></h3>
@@ -55,7 +53,7 @@ function loadLogin(){
                 loadLoggedInUser(this.responseText);
                 
             }else{
-                loadLoginForm();
+                LoadLoginForm();
             }
         }
     };
