@@ -8,7 +8,7 @@ function LoadLoginForm(){
       <input type="password" id="password"/>
       <input type="submit" value="Login" id="submit_btn"/>
       `;
-    document.getElementById('login_area').innerHTML=LoginHtml;
+    document.getElementById('login_area').innerHTML=loginHtml;
       
     var submit = document.getElementById('submit_btn');
     submit.onclick = function(){
