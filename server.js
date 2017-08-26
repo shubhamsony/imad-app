@@ -156,6 +156,17 @@ app.get('/get-articles', function (req, res) {
    });
 });
 
+app.get('/articles/:article-name',function(req,res){
+   
+   pool.query('SELECT * FROM article WHERE title=$1',[req.params.article-name],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }else{
+           var article_data = result.rows[0];
+           return createTemplate(article_data);
+       }
+   }) ;
+});
 app.get('/hash/:input',function (req, res ){
     var hashedString = hash(req.params.input,'this is an string');
     res.send(hashedString);
