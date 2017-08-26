@@ -71,8 +71,7 @@ function loadComments(){
           if(request.status===200){
               var content= '';
               var commentsData = JSON.parse(this.responseText);
-              var z =commentsData[0].username;
-               alert(z);
+             
         
               for(var i=0; i<commentsData.length;i++){
                   var time = new Date(commentsData[i].timestamp);
@@ -82,7 +81,7 @@ function loadComments(){
                         ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()}
                     </div>
                 </div>`;
-                alert(content);
+                
               }
              
               comments.innerHTML=content;
