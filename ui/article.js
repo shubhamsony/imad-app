@@ -73,7 +73,7 @@ function loadComments(){
               var commentsData = JSON.parse(this.responseText);
               var z =commentsData[0].username;
                alert(z);
-               alert(content);
+        
               for(var i=0; i<commentsData.length;i++){
                   content+=`<div class="comment">
                    <p>${escapeHtml(commentsData[i].comment)}</p>
@@ -81,6 +81,7 @@ function loadComments(){
                         ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                     </div>
                 </div>`;
+                alert(content);
               }
              
               comments.innerHTML=content;
