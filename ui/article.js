@@ -71,7 +71,7 @@ function loadComments(){
           var comments = document.getElementById('comments'); 
           if(request.status===200){
               var content= '';
-              var commentsData = JSON.parse(responseText);
+              var commentsData = JSON.parse(this.responseText);
                alert(commentsData[0].username);
               for(var i=0; i<commentsData.length;i++){
                   content+=`<div class="comment">
