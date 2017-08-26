@@ -73,13 +73,13 @@ function loadComments(){
               var commentsData = JSON.parse(this.responseText);
               for(var i=0; i<commentsData.length;i++){
                   content+=`<div class="comment">
-                   <p>${escapeHTML(commentsData[i].comment)}</p>
+                   <p>${escapeHtml(commentsData[i].comment)}</p>
                     <div class="commenter">
                         ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                     </div>
                 </div>`;
               }
-              comments.innerHTML='content';
+              comments.innerHTML=content;
           }else{
               comments.innerHTML('Oops could not load comments');
           }
