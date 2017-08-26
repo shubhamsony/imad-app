@@ -65,12 +65,13 @@ function loadComments(){
     
     var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
-        alert('hello');
+        
       if(request.readyState===XMLHttpRequest.DONE){
           var comments = document.getElementById('comments'); 
           if(request.status===200){
               var content= '';
               var commentsData = JSON.parse(this.responseText);
+alert('hello');
               for(var i=0; i<commentsData.length;i++){
                   content+=`<div class="comment">
                    <p>${escapeHTML(commentsData[i].comment)}</p>
