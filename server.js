@@ -164,7 +164,7 @@ app.get('/get-comments/:articleName' ,function(req,res){
               if (err) {
           res.status(500).send(err.toString());
       } else {
-          res.send(JSON.stringify(result.rows[0]));
+          res.send(JSON.stringify(result.rows));
       }
     });
 });
