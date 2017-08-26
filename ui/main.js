@@ -1,5 +1,3 @@
-document.getElementById('login_area').innerHTML='mcd';
-
 function loadLoginForm(){
     var loginHtml=`
       <h3>if not registered <a href="/sign-up">Sign Up</a></h3>
@@ -84,7 +82,7 @@ function loadArticles(){
             }
         }
     };
-    request.open('GET','/get-articles',True);
+    request.open('GET','/get-articles',true);
     request.send(null);
 }
 loadLogin();
