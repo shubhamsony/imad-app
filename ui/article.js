@@ -72,7 +72,8 @@ function loadComments(){
           if(request.status===200){
               var content= '';
               var commentsData = JSON.parse(this.responseText);
-               alert(commentsData[0].username);
+              var z =${commentsData[0].username};
+               alert(z);
               for(var i=0; i<commentsData.length;i++){
                   content+=`<div class="comment">
                    <p>${escapeHtml(commentsData[i].comment)}</p>
