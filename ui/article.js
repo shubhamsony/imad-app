@@ -71,7 +71,6 @@ function loadComments(){
           if(request.status===200){
               var content= '';
               var commentsData = JSON.parse(this.responseText);
-alert('hello');
               for(var i=0; i<commentsData.length;i++){
                   content+=`<div class="comment">
                    <p>${escapeHTML(commentsData[i].comment)}</p>
@@ -80,7 +79,7 @@ alert('hello');
                     </div>
                 </div>`;
               }
-              comments.innerHTML=content;
+              comments.innerHTML='content';
           }else{
               comments.innerHTML('Oops could not load comments');
           }
