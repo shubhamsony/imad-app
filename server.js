@@ -163,7 +163,7 @@ app.get('/articles/:articleName',function(req,res){
            res.status(500).send(err.toString());
        }else{
            var article_data = result.rows[0];
-           return createTemplate(article_data);
+           res.send(createTemplate(article_data));
        }
    }) ;
 });
