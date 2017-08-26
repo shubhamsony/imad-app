@@ -45,7 +45,7 @@ function loadLogin(){
      var request = new XMLHttpRequest();
      request.onreadystatechange = function(){
          if(request.readyState===XMLHttpRequest.DONE){
-             if(requwst.status===200){
+             if(request.status===200){
                  loadCommentForm(this.responseText);
              }
          }
