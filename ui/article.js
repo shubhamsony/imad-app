@@ -65,6 +65,7 @@ function loadComments(){
     
     var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
+        alert('hello');
       if(request.readyState===XMLHttpRequest.DONE){
           var comments = document.getElementById('comments'); 
           if(request.status===200){
