@@ -78,7 +78,7 @@ function loadComments(){
                   content+=`<div class="comment">
                    <p>${escapeHtml(commentsData[i].comment)}</p>
                     <div class="commenter">
-                        ${commentsData[i].username} - ${commentsData[i].timestamp.toTimeString()} on ${commentsData[i].timestamp.toDateString()} 
+                        ${commentsData[i].username} - ${commentsData[i].timestamp.toDateString()} 
                     </div>
                 </div>`;
                 alert(content);
