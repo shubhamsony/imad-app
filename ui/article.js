@@ -27,6 +27,7 @@ function loadCommentForm () {
                 } else {
                     alert('Error! Could not submit comment');
                 }
+                alert(content);
                 submit.value = 'Submit';
           }
         };
