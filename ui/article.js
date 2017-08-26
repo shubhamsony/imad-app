@@ -57,6 +57,7 @@ function loadLogin(){
 function escapeHtml(text){
     var $text = document.createTextNode(text);
     var $div = document.createElement('div');
+    alert(text);
     $div.appendChild(Stext);
     
     return $div.innerHTML;
