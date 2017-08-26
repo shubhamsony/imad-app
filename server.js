@@ -161,7 +161,6 @@ app.get('/get-articles', function (req, res) {
 
 app.post('/submit-comment/:articleName', function(req,res){
     if(req.session && req.session.auth && req.session.auth.userId ){
-    comment = req.body.comment;
     pool.query('SELECT * FROM article WHERE title=$1',[req.params.articleName],function(err,result){
         if(err){
             res.status(500).send(err.toString());
@@ -170,7 +169,7 @@ app.post('/submit-comment/:articleName', function(req,res){
                 res.status(400).send('Article Not Found!');
             }else{
                 var articleid = result.rows[0].article_id;
-                pool.query('INSERT INTO comment (article_id,comment,user_id) VALUES ($1,$2,$3)',[articleid,comment,req.session.auth.userId],function(err,result){
+                pool.query('INSERT INTO comment (article_id,comment,user_id) VALUES ($1,$2,$3)',[articleid,req.body.comment,req.session.auth.userId],function(err,result){
                     if(err){
                         res.status(500).send(err.toString());
                     }else{
