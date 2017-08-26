@@ -57,10 +57,8 @@ function loadLogin(){
 function escapeHtml(text){
     var $text = document.createTextNode(text);
     var $div = document.createElement('div');
-    alert(text);
     $div.appendChild(Stext);
-    
-    return $div.innerHTML;
+     return $div.innerHTML;
 }
 
 function loadComments(){
@@ -83,7 +81,7 @@ function loadComments(){
                     </div>
                 </div>`;
               }
-             
+             alert(content);
               comments.innerHTML=content;
           }else{
               comments.innerHTML('Oops could not load comments');
