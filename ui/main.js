@@ -1,4 +1,4 @@
-document.getElementById('login_area').innerHTML='mc';
+document.getElementById('login_area').innerHTML='mcd';
 
 function LoadLoginForm(){
     var loginHtml=`
