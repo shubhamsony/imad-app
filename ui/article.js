@@ -27,7 +27,6 @@ function loadCommentForm () {
                 } else {
                     alert('Error! Could not submit comment');
                 }
-                alert(content);
                 submit.value = 'Submit';
           }
         };
@@ -80,6 +79,7 @@ function loadComments(){
                     </div>
                 </div>`;
               }
+              alert(content);
               comments.innerHTML=content;
           }else{
               comments.innerHTML('Oops could not load comments');
