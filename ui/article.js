@@ -58,7 +58,7 @@ function escapeHtml(text){
     var $text = document.createTextNode(text);
     var $div = document.createElement('div');
     $div.appendChild(Stext);
-     alert('text');
+    
     return $div.innerHTML;
 }
 
@@ -72,6 +72,7 @@ function loadComments(){
           if(request.status===200){
               var content= '';
               var commentsData = JSON.parse(this.responseText);
+               alert(commentsData);
               for(var i=0; i<commentsData.length;i++){
                   content+=`<div class="comment">
                    <p>${escapeHtml(commentsData[i].comment)}</p>
