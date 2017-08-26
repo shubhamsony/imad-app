@@ -160,7 +160,7 @@ app.get('/get-articles', function (req, res) {
 });
 
 app.post('/submit-comment/:articleName', function(req,res){
-    if(req.session && req.session.auth && req.session.userId ){
+    if(req.session && req.session.auth && req.session.auth.userId ){
     comment = req.body.comment;
     pool.query('SELECT * FROM article WHERE title=$1',[req.params.articleName],function(err,result){
         if(err){
