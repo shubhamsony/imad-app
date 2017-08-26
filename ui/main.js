@@ -6,4 +6,4 @@
       <input type="password" id="password"/>
       <input type="submit" value="Login" id="submit_btn"/>
       `;
-    document.getElementById('login_area').innerHTML('mc');
+    document.getElementById('login_area').innerHTML='mc';
