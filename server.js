@@ -44,7 +44,7 @@ function createTemplate (data) {
               </div>
               <hr/>
               <h3>
-                  ${heading}
+                  ${heading},${pic}
               </h3>
               <p><img src=${pic}></p>
               <div>
