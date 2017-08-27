@@ -134,7 +134,7 @@ app.get('/check-login' , function(req , res){
            if (err) {
               res.status(500).send(err.toString());
            } else {
-              res.send(JSON.stringify{result.rows[0].username,result.rows[0].profile_pic});    
+              res.send(JSON.stringify({result.rows[0].username,result.rows[0].profile_pic}));    
            }
        });
    } else {
