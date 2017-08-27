@@ -25,12 +25,14 @@ function createTemplate (data) {
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
+    var member=data.username;
+    var pic = data.profie_pic;
     
     var htmlTemplate = `
     <html>
       <head>
           <title>
-              ${title}
+              ${title},${member}
           </title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link href="/ui/style.css" rel="stylesheet" />
@@ -196,7 +198,7 @@ app.get('/get-comments/:articleName' ,function(req,res){
 
 app.get('/articles/:articleName',function(req,res){
    
-   pool.query('SELECT * FROM article WHERE title=$1',[req.params.articleName],function(err,result){
+   pool.query('SELECT article.*,test.profile_pic,test.username FROM article , test WHERE title=$1 AND test.user_id=$2',[req.params.articleName,req.session.auth.userId],function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }else{
