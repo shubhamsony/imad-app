@@ -46,7 +46,7 @@ function createTemplate (data) {
               <h3>
                   ${heading}
               </h3>
-              <p><img src=pic></p>
+              <p><img src=${pic}></p>
               <div>
                   ${date.toDateString()}
               </div>
