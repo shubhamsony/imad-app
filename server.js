@@ -44,15 +44,15 @@ function createTemplate (data) {
                   <img src=${pic} width="50px" height="50px">
               </div>
           <div class="container">    
-              <h3>
+              <h2>
                  ${heading}
-              </h3>
+              </h2>
               <p></p>
               <div style="font-size:10px">
                   ${date.toDateString()}
               </div>
               <div>
-                ${content}
+               <h3> ${content}</h3>
               </div>
               <br><br>
               <h4>Comments</h4>
