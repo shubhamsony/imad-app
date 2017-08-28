@@ -32,7 +32,7 @@ function createTemplate (data) {
     <html>
       <head>
           <title>
-              ${title},${member}
+              ${title}
           </title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link href="/ui/style.css" rel="stylesheet" />
@@ -44,8 +44,8 @@ function createTemplate (data) {
               </div>
               <hr/>
               <h3>
-                  ${heading}
-                  <img src=${pic} width="100px" height="100px">
+                 <div style="display:inline-block"> ${heading}</div>
+                  <div><img src=${pic} width="100px" height="100px"></div>
               </h3>
               <p></p>
               <div>
