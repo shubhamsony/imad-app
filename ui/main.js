@@ -38,9 +38,11 @@ function loadLoginForm(){
 }
 function loadLoggedInUser (user){
     var loginArea = document.getElementById('login_area');
-    var aa = user.username
+    var name = user.username;
+    var pic = user.profile_pic;
     loginArea.innerHTML=`
         <h3> Hi <i>${aa}</i></h3>
+        <img src=${pic} height="100px" width="100px">;
         <a href="/logout">Logout</a>
         `;
         
