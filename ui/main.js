@@ -43,7 +43,7 @@ function loadLoggedInUser (user){
     loginArea.innerHTML=`
         <h3> Hi <i>${name}</i></h3>
        <div><img src=${pic} height="100px" width="100px"></div>
-        <a href="/logout" style="text-decoration:none">Logout</a>
+        <a href="/logout" style="text-decoration:none;color:black">Logout</a>
         `;
         
 }
