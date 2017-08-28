@@ -26,6 +26,7 @@ body {
 .head img{
     border-radius:50%;
     float:right;
+    line-height:100px;
 }
 .head{
     background-color:orange;
