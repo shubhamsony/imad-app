@@ -1,4 +1,4 @@
-body {
+body,h1,h2,h3,h4 {
     font-family: sans-serif;
     margin:0;
 }
@@ -30,5 +30,5 @@ body {
 .head{
     background-color:orange;
     line-height:100px;
-    
+    margin:0;
 }
