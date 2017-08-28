@@ -39,10 +39,8 @@ function loadLoginForm(){
 function loadLoggedInUser (text){
     var loginArea = document.gxetElementById('login_area');
     var username = text.username;
-    var pic = text.profile_pic;
     loginArea.innerHTML=`
         <h3> Hi <i>${username}</i></h3>
-        <img src=${pic} height="80px" width="100px">
         <a href="/logout">Logout</a>
         `;
         
