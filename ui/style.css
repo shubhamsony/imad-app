@@ -43,3 +43,6 @@ body,h1,h2,h3,h4 {
 ul {
     list-style:none;
 }
+img{
+    border-radius:50%;
+}
