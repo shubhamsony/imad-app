@@ -19,9 +19,6 @@ body,h1,h2,h3,h4 {
 .img-medium {
     height: 200px;
 }
-.container{
-    padding:20px;
-}
 .head img{
     border-radius:50%;
     position:absolute;
