@@ -42,7 +42,7 @@ function createTemplate (data) {
               <div>
                   <a href="/">Home</a>
               </div>
-              <hr/>
+              
               <h3>
                  <div class="head"> ${heading}
                   <img src=${pic} width="100px" height="100px"></div>
@@ -54,7 +54,7 @@ function createTemplate (data) {
               <div>
                 ${content}
               </div>
-              <hr/>
+              
               <h4>Comments</h4>
               <div id="comment_form">
               </div>
