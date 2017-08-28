@@ -33,7 +33,7 @@ body,h1,h2,h3,h4 {
     font-weight:bold;
     font-size:22px;
 }
-.head ,ul a{
+.head a,ul a{
     text-decoration:none;
     color:black;
 }
