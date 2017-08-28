@@ -31,8 +31,10 @@ body,h1,h2,h3,h4 {
     margin:0;
     padding:10px;
     font-weight:bold;
-    text-decoration:none;
     font-size:22px;
+}
+.head a{
+    text-decoration:none;
 }
 .container{
     padding:10px;
