@@ -44,8 +44,8 @@ function createTemplate (data) {
               </div>
               <hr/>
               <h3>
-                 <div style="display:inline-block"> ${heading}</div>
-                  <div><img src=${pic} width="100px" height="100px"></div>
+                 <div class="head"> ${heading}
+                  <img src=${pic} width="100px" height="100px"></div>
               </h3>
               <p></p>
               <div>
