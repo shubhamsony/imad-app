@@ -22,7 +22,7 @@ body,h1,h2,h3,h4 {
 .head img{
     border-radius:50%;
     position:absolute;
-    right:0;
+    right:3%;
     top:2%;
 }
 .head{
