@@ -25,7 +25,7 @@ body {
 }
 .head img{
     border-radius:50%;
-    position:relative;
+    position:absolute;
     right:0;
 }
 .head{
