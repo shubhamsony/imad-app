@@ -26,7 +26,7 @@ function createTemplate (data) {
     var heading = data.heading;
     var content = data.content;
     var member=data.username;
-    var pic = data.profie_pic;
+    var pic = data.profile_pic;
     
     var htmlTemplate = `
     <html>
@@ -45,6 +45,7 @@ function createTemplate (data) {
               <hr/>
               <h3>
                   ${heading}
+                  <img src=${pic}>
               </h3>
               <p></p>
               <div>
