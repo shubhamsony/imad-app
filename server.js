@@ -40,7 +40,7 @@ function createTemplate (data) {
       <body>
           
               <div class="head">
-                  <a href="/">Home</a>
+                  <h2><a href="/">Home</a></h2>
                   <img src=${pic} width="70px" height="70px">
               </div>
           <div class="container">    
