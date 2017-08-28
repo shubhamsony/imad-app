@@ -36,10 +36,13 @@ function loadLoginForm(){
 };
 
 }
-function loadLoggedInUser (username){
-    var loginArea = document.getElementById('login_area');
+function loadLoggedInUser (text){
+    var loginArea = document.gxetElementById('login_area');
+    var username = text.username;
+    var pic = text.profile_pic;
     loginArea.innerHTML=`
         <h3> Hi <i>${username}</i></h3>
+        <img src=${pic} height="80px" width="100px">
         <a href="/logout">Logout</a>
         `;
         
@@ -51,7 +54,7 @@ function loadLogin(){
         if(request.readyState===XMLHttpRequest.DONE){
             if(request.status===200){
                 var response = JSON.parse(this.responseText);
-                loadLoggedInUser(response.username);
+                loadLoggedInUser(response);
                 
             }else{
                 loadLoginForm();
