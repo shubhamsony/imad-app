@@ -38,12 +38,12 @@ function createTemplate (data) {
           <link href="/ui/style.css" rel="stylesheet" />
       </head> 
       <body>
-          <div class="container">
+          
               <div class="head">
                   <a href="/">Home</a>
                   <img src=${pic} width="70px" height="70px">
               </div>
-              
+          <div class="container">    
               <h3>
                  ${heading}
               </h3>
