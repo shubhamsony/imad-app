@@ -25,6 +25,7 @@ body {
     width:70%;
     margin:10px;
 }
-img{
+.head img{
     border-radius:50%;
+    float:right;
 }
