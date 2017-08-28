@@ -36,9 +36,8 @@ function loadLoginForm(){
 };
 
 }
-function loadLoggedInUser (texot){
+function loadLoggedInUser (username){
     var loginArea = document.gxetElementById('login_area');
-    var username = texot.username;
     loginArea.innerHTML=`
         <h3> Hi <i>${username}</i></h3>
         <a href="/logout">Logout</a>
@@ -52,7 +51,7 @@ function loadLogin(){
         if(request.readyState===XMLHttpRequest.DONE){
             if(request.status===200){
                 var response = JSON.parse(this.responseText);
-                loadLoggedInUser(response);
+                loadLoggedInUser(response.username);
                 
             }else{
                 loadLoginForm();
