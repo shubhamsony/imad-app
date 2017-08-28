@@ -42,7 +42,7 @@ function loadLoggedInUser (user){
     var pic = user.profile_pic;
     loginArea.innerHTML=`
         <h3> Hi <i>${name}</i></h3>
-        <img src=${pic} height="100px" width="100px">
+       <div><img src=${pic} height="100px" width="100px"></div>
         <a href="/logout">Logout</a>
         `;
         
