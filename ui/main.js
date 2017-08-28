@@ -36,10 +36,11 @@ function loadLoginForm(){
 };
 
 }
-function loadLoggedInUser (username){
+function loadLoggedInUser (user){
     var loginArea = document.getElementById('login_area');
+    var aa = user.username
     loginArea.innerHTML=`
-        <h3> Hi <i>${username}</i></h3>
+        <h3> Hi <i>${aa}</i></h3>
         <a href="/logout">Logout</a>
         `;
         
@@ -51,7 +52,7 @@ function loadLogin(){
         if(request.readyState===XMLHttpRequest.DONE){
             if(request.status===200){
                 var response = JSON.parse(this.responseText);
-                loadLoggedInUser(response.username);
+                loadLoggedInUser(response);
                 
             }else{
                 loadLoginForm();
