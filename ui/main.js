@@ -36,9 +36,9 @@ function loadLoginForm(){
 };
 
 }
-function loadLoggedInUser (text){
+function loadLoggedInUser (texot){
     var loginArea = document.gxetElementById('login_area');
-    var username = text.username;
+    var username = texot.username;
     loginArea.innerHTML=`
         <h3> Hi <i>${username}</i></h3>
         <a href="/logout">Logout</a>
