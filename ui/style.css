@@ -25,7 +25,8 @@ body {
 }
 .head img{
     border-radius:50%;
-    text-align:right;
+    position:relative;
+    right:0;
 }
 .head{
     background-color:orange;
