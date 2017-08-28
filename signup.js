@@ -12,8 +12,9 @@ submit.onclick = function(){
         }
     };
     var username=document.getElementById('username').value;
+    var profile_pic=document.getElementById('profile_pic').value;
     var password=document.getElementById('password').value;
     request.open('POST','http://shubhamsoni136.imad.hasura-app.io/create-user', true );
     request.setRequestHeader('Content-Type','application/json');
-    request.send(JSON.stringify({"username":username , "password":password }));
+    request.send(JSON.stringify({"username":username , "password":password ,"profile_pic":profile_pic}));
 };
