@@ -48,7 +48,7 @@ function createTemplate (data) {
                  ${heading}
               </h3>
               <p></p>
-              <div>
+              <div style="font-size:10px">
                   ${date.toDateString()}
               </div>
               <div>
